@@ -1,0 +1,46 @@
+#include <LiquidCrystal.h>
+
+// LCD pin config: RS, E, D4, D5, D6, D7
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int tempPin = A0;
+const int buttonPin = 8;
+
+int counter = 0;
+bool lastButtonState = LOW;
+
+void setup() {
+  lcd.begin(16, 2);
+  pinMode(buttonPin, INPUT);
+  lcd.print("Counter & Temp");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  // Read temperature
+  int tempReading = analogRead(tempPin);
+  float voltage = tempReading * 5.0 / 1023.0;
+  float temperatureC = voltage * 100; // For LM35
+
+  // Read button state
+  bool currentButtonState = digitalRead(buttonPin);
+
+  if (currentButtonState == HIGH && lastButtonState == LOW) {
+    counter++;
+    delay(200); // debounce
+  }
+  lastButtonState = currentButtonState;
+
+  // Display on LCD
+  lcd.setCursor(0, 0);
+  lcd.print("Count: ");
+  lcd.print(counter);
+  lcd.setCursor(0, 1);
+  lcd.print("Temp: ");
+  lcd.print(temperatureC, 1);
+  lcd.print((char)223); // Degree symbol
+  lcd.print("C");
+
+  delay(500);
+}
