@@ -24,4 +24,4 @@ Industrial part counters
 Entry-level learning project for digital input/output and debouncing
 
 # LINK OF PROJECT
- https://www.tinkercad.com/things/998tM8NYSyI-home-automation-system?sharecode=aFn17AVyB7ScX9xMySdKy7uCmR-ijfReWOaMkLbH2Mo
+ https://www.tinkercad.com/things/aoaUB6Oc8UK-push-button-counter?sharecode=a6KsvaCIO9oixg1baqpBj4fUJ6h8F8OfOXiz43m2WYg
