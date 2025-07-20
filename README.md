@@ -12,4 +12,4 @@ Jumper wires
 (Optional) Temperature sensor to display additional data
 
 # LINK OF PROJECT
-   # https://www.tinkercad.com/things/aoaUB6Oc8UK-push-button-counter?sharecode=a6KsvaCIO9oixg1baqpBj4fUJ6h8F8OfOXiz43m2WYg
+https://www.tinkercad.com/things/aoaUB6Oc8UK-push-button-counter?sharecode=a6KsvaCIO9oixg1baqpBj4fUJ6h8F8OfOXiz43m2WYg
